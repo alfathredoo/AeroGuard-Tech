@@ -1,3 +1,20 @@
+<?php 
+    include "../service/database.php";
+
+    if(isset($_POST['login'])) {
+        $username = $_POST['username'];
+        // echo $username;
+        $password = $_POST['password'];
+        // echo $password; 
+    }
+
+    if($db->connect_error){
+        echo "koneksi dataase error";
+        die('error!');
+    } 
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,14 +31,15 @@
         <div class="login-card">
             <h2>Welcome AeroGuard Tech</h2>
             <p>Silakan masuk ke akun Anda</p>
-            <form>
+            <!-- Form Box Username & Password -->
+            <form action="login.php" method="POST">
                 <div class="input-field">
-                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Username" name="username"/>
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" name="password"/>
                 </div>
-                <button type="submit" class="login-btn">Masuk</button>
+                <button type="submit" class="login-btn" name="login">Masuk</button>
             </form>
             <div class="footer-link">
                 Belum punya akun? <a href="register.php">Daftar sekarang</a>
