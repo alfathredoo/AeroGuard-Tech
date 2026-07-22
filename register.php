@@ -1,3 +1,15 @@
+<?php 
+    include '../service/database.php';
+
+    if(isset($_POST["register"])){
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $sql = "INSERT INTO users (usernames"
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,18 +25,16 @@
         <br>
         <div class="login-card">
             <h2>Welcome AeroGuard Tech</h2>
-            <p>Silakan Daftar Akun</p>
-            <form>
+            <p>Silakan daftar akun anda!</p>
+            <!-- form Username & Password -->
+            <form action="register.php" method="POST">
                 <div class="input-field">
-                    <input type="text" placeholder="Unsername">
+                    <input type="text" placeholder="Username" name="username"/>
                 </div>
                 <div class="input-field">
-                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" name="password"/>
                 </div>
-                <div class="input-field">
-                    <input type="password" placeholder="Password" required>
-                </div>
-                <button type="submit" class="login-btn">Buat Akun</button>
+                <button type="submit" class="login-btn">Buat akun</button>
             </form>
         </div>
         <br>
