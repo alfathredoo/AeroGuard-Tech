@@ -1,1 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2fe55f 0%, #255df8 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+}
+
+/* Pastikan login-wrapper bisa menyusun elemen secara vertikal */
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 320px;
+    text-align: center;
+    color: white;
+}
+
+h1 { color: white;}
+
+h2 { margin-bottom: 0.5rem; }
+
+p { font-size: 0.9rem; opacity: 0.8; margin-bottom: 2rem; }
+
+.input-field { margin-bottom: 1.5rem; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-sizing: border-box;
+}
+
+input::placeholder { color: rgba(255, 255, 255, 0.7); }
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #16aff6;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.login-btn:hover { transform: scale(1.02); }
+
+.footer-link { margin-top: 1.5rem; font-size: 0.8rem; }
+.footer-link a { color: white; font-weight: 600; }
